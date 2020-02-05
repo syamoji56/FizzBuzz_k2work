@@ -40,7 +40,7 @@ class FizzBuzzTest < Minitest::Test
 
     describe '1から１００までの数の配列を返す' do
       def setup
-        @result = FizzBuzz.print_1_to_100
+        @result = FizzBuzz.generate_list
       end
 
       def test_配列の初めは文字列の1を返す
@@ -79,7 +79,7 @@ class FizzBuzz
     result
   end
 
-  def self.print_1_to_100
+  def self.generate_list
     result = []
     (1..100).each { |n| result << generate(n) }
     result
