@@ -4,6 +4,7 @@ require 'minitest/reporters'
 Minitest::Reporters.use!
 require 'minitest/autorun'
 
+
 class FizzBuzzTest < Minitest::Test
   describe 'FizzBuzz' do
     def setup
@@ -40,12 +41,14 @@ class FizzBuzzTest < Minitest::Test
   end
 end
 
+
 class FizzBuzz
   def self.generate(number)
     result = number.to_s
-    if number.modulo(3).zero?
+    if number.modulo(3).zero? && number.modulo(5).zero?
+      result = 'FizzBuzz'
+    elsif number.modulo(3).zero?
       result = 'Fizz'
-      result = 'FizzBuzz' if number.modulo(15).zero?
     elsif number.modulo(5).zero?
       result = 'Buzz'
     end
