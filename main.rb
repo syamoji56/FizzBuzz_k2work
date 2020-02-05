@@ -67,6 +67,7 @@ class FizzBuzzTest < Minitest::Test
 end
 
 class FizzBuzz
+  MAX_NUMBER=100
   def self.generate(number)
     is_fizz = number.modulo(3).zero?
     is_buzz = number.modulo(5).zero?
@@ -79,6 +80,7 @@ class FizzBuzz
   end
 
   def self.generate_list
-    (1..100).map { |n| generate(n) }
+    #１から最大値までのFizzBuzz配列を１発で作る
+    (1..MAX_NUMBER).map { |n| generate(n) }
   end
 end
