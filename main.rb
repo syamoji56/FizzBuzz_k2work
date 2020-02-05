@@ -5,12 +5,11 @@ Minitest::Reporters.use!
 require 'minitest/autorun'
 
 class FizzBuzzTest < Minitest::Test
-
   describe 'FizzBuzz' do
     def setup
       @fizzbuzz = FizzBuzz
     end
-  
+
     describe '３の倍数の場合' do
       def test_3を渡したら文字列Fizzを返す
         assert_equal 'fizz', @fizzbuzz.generate(3)
@@ -23,11 +22,17 @@ class FizzBuzzTest < Minitest::Test
       end
     end
 
+    describe '３と５の倍数の場合' do
+      def test_15を渡したら文字列FizzBuzzを返す
+        assert_equal 'FizzBuzz', @fizzbuzz.generate(15)
+      end
+    end
+
     describe 'その他の場合' do
       def test_1を渡したら文字列1を返す
         assert_equal '1', FizzBuzz.generate(1)
       end
-    
+
       def test_2を渡したら文字列2を返す
         assert_equal '2', FizzBuzz.generate(2)
       end
@@ -35,12 +40,12 @@ class FizzBuzzTest < Minitest::Test
   end
 end
 
-
 class FizzBuzz
   def self.generate(number)
     result = number.to_s
     if number.modulo(3).zero?
       result = 'fizz'
+      result = 'FizzBuzz' if number.modulo(15).zero?
     elsif number.modulo(5).zero?
       result = 'buzz'
     end
