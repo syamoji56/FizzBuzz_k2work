@@ -69,7 +69,7 @@ end
 class FizzBuzz
   def self.generate(number)
     is_fizz = number.modulo(3).zero?
-    is_buzz=number.modulo(5).zero?
+    is_buzz = number.modulo(5).zero?
 
     return 'FizzBuzz' if is_fizz && is_buzz
     return 'Fizz' if is_fizz
@@ -79,10 +79,6 @@ class FizzBuzz
   end
 
   def self.generate_list
-    result = []
-
-    (1..100).each { |n| result << generate(n) }
-
-    result
+    (1..100).map { |n| generate(n) }
   end
 end
