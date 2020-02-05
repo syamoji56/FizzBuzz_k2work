@@ -43,6 +43,11 @@ class FizzBuzzTest < Minitest::Test
         result = FizzBuzz.print_1_to_100
         assert_equal '1', result.first
       end
+
+      def test_配列の最後は文字列の100を返す
+        result = FizzBuzz.print_1_to_100
+        assert_equal '100', result.last
+      end
     end
   end
 end
@@ -61,6 +66,8 @@ class FizzBuzz
   end
 
   def self.print_1_to_100
-    %w[1 2 3]
+    result = []
+    (1..100).each { |n| result << n.to_s }
+    result
   end
 end
