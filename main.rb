@@ -6,7 +6,7 @@ require 'minitest/autorun'
 
 class FizzBuzzTest < Minitest::Test
   def setup
-    @fizzbuzz=FizzBuzz
+    @fizzbuzz = FizzBuzz
   end
 
   def test_1を渡したら文字列1を返す
@@ -18,16 +18,21 @@ class FizzBuzzTest < Minitest::Test
   end
 
   def test_3を渡したら文字列Fizzを返す
-    assert_equal 'fizz',@fizzbuzz.generate(3)
+    assert_equal 'fizz', @fizzbuzz.generate(3)
   end
 
+  def test_5を渡したら文字列Buzzを返す
+    assert_equal 'buzz', @fizzbuzz.generate(5)
+  end
 end
 
 class FizzBuzz
   def self.generate(number)
-    result=number.to_s
+    result = number.to_s
     if number.modulo(3).zero?
-      result='fizz'
+      result = 'fizz'
+    elsif number.modulo(5).zero?
+      result = 'buzz'
     end
     result
   end
