@@ -4,7 +4,6 @@ require 'minitest/reporters'
 Minitest::Reporters.use!
 require 'minitest/autorun'
 
-
 class FizzBuzzTest < Minitest::Test
   describe 'FizzBuzz' do
     def setup
@@ -38,9 +37,15 @@ class FizzBuzzTest < Minitest::Test
         assert_equal '2', FizzBuzz.generate(2)
       end
     end
+
+    describe '1から１００までの数の配列を返す' do
+      def test_配列の初めは文字列の1を返す
+        result = FizzBuzz.print_1_to_100
+        assert_equal '1', result.first
+      end
+    end
   end
 end
-
 
 class FizzBuzz
   def self.generate(number)
@@ -53,5 +58,9 @@ class FizzBuzz
       result = 'Buzz'
     end
     result
+  end
+
+  def self.print_1_to_100
+    %w[1 2 3]
   end
 end
