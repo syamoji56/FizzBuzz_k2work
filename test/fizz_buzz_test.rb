@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'simplecov'
+SimpleCov.start
 require 'minitest/reporters'
 Minitest::Reporters.use!
 require 'minitest/autorun'
@@ -7,7 +9,7 @@ require './lib/fizz_buzz'
 
 class FizzBuzzTest < Minitest::Test
   describe 'FizzBuzz' do
-    
+
     def setup
       @fizzbuzz = FizzBuzz
     end

@@ -3,6 +3,7 @@
 # need comment for rubocop's don't detected
 class FizzBuzz
   MAX_NUMBER = 100
+
   def self.generate(number)
     is_fizz = number.modulo(3).zero?
     is_buzz = number.modulo(5).zero?
