@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# need comment for rubocop's don't detected
 class FizzBuzz
   MAX_NUMBER = 100
   def self.generate(number)
@@ -14,7 +15,7 @@ class FizzBuzz
   end
 
   def self.generate_list
-    # １から最大値までのFizzBuzz配列を１発で作る
+    # 1から最大値までのFizzBuzz配列を１発で作る
     (1..MAX_NUMBER).map { |n| generate(n) }
   end
 end
