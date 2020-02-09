@@ -366,8 +366,8 @@ TvFXMeuCkZPcaEBLqvgPBhCuiZo8+sAAAAAASUVORK5CYII=
     <div class="information">
       <div class="infobox">
         <div class="total">
-          1 file inspected,
-          7 offenses detected:
+          3 files inspected,
+          9 offenses detected:
         </div>
         <ul class="offenses-list">
           
@@ -375,6 +375,20 @@ TvFXMeuCkZPcaEBLqvgPBhCuiZo8+sAAAAAASUVORK5CYII=
             <li>
               <a href="#offense_Guardfile">
                 Guardfile - 7 offenses
+              </a>
+            </li>
+          
+            
+            <li>
+              <a href="#offense_lib/fizz_buzz.rb">
+                lib/fizz_buzz.rb - 1 offense
+              </a>
+            </li>
+          
+            
+            <li>
+              <a href="#offense_test/fizz_buzz_test.rb">
+                test/fizz_buzz_test.rb - 1 offense
               </a>
             </li>
           
@@ -463,6 +477,48 @@ TvFXMeuCkZPcaEBLqvgPBhCuiZo8+sAAAAAASUVORK5CYII=
             </div>
             
             <pre><code>guard :rubocop, cli: %w[--auto-correct --format fuubar --format html -o ./tmp/ru<span class="highlight convention">bocop_results.html] do</span></code></pre>
+            
+          </div>
+          
+        </div>
+      </div>
+      
+      
+      
+      <div class="offense-box" id="offense_lib/fizz_buzz.rb">
+        <div class="box-title-placeholder"><h3>&nbsp;</h3></div>
+        <div class="box-title"><h3>lib/fizz_buzz.rb - 1 offense</h3></div>
+        <div class="offense-reports">
+          
+          <div class="report">
+            <div class="meta">
+              <span class="location">Line #8</span> –
+              <span class="severity convention">convention:</span>
+              <span class="message">Style/GuardClause: Use a guard clause (<code>return unless type == 1</code>) instead of wrapping the code inside a conditional expression.</span>
+            </div>
+            
+            <pre><code>    <span class="highlight convention">if</span> type == 1</code></pre>
+            
+          </div>
+          
+        </div>
+      </div>
+      
+      
+      
+      <div class="offense-box" id="offense_test/fizz_buzz_test.rb">
+        <div class="box-title-placeholder"><h3>&nbsp;</h3></div>
+        <div class="box-title"><h3>test/fizz_buzz_test.rb - 1 offense</h3></div>
+        <div class="offense-reports">
+          
+          <div class="report">
+            <div class="meta">
+              <span class="location">Line #11</span> –
+              <span class="severity convention">convention:</span>
+              <span class="message">Metrics/BlockLength: Block has too many lines. [48/46]</span>
+            </div>
+            
+            <pre><code>  <span class="highlight convention">describe &#39;FizzBuzz&#39; do</span> <span class="extra-code">...</span></code></pre>
             
           </div>
           
