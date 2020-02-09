@@ -2,4 +2,4 @@
 
 require './lib/fizz_buzz.rb'
 
-puts FizzBuzz.generate_list
+puts FizzBuzz.generate_list(1)

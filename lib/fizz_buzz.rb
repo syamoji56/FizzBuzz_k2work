@@ -28,8 +28,8 @@ class FizzBuzz
     end
   end
 
-  def self.generate_list
+  def self.generate_list(type)
     # 1から最大値までのFizzBuzz配列を１発で作る
-    (1..MAX_NUMBER).map { |n| generate(n, 1) }
+    (1..MAX_NUMBER).map { |n| generate(n, type) }
   end
 end
