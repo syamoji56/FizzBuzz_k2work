@@ -14,8 +14,17 @@ class FizzBuzz
       return 'Buzz' if is_buzz
 
       number.to_s
+
+    elsif type == 2
+      number.to_s
+
     else
-      number.to_s if type == 2
+      is_fizz = number.modulo(3).zero?
+      is_buzz = number.modulo(5).zero?
+
+      return 'FizzBuzz' if is_fizz && is_buzz
+
+      number.to_s
     end
   end
 
