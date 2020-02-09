@@ -12,7 +12,7 @@ class FizzBuzzTest < Minitest::Test
     describe 'タイプ１は通常' do
       def setup
         @fizzbuzz = FizzBuzz
-        @type = '1'
+        @type = 1
       end
 
       describe '３の倍数の場合' do
@@ -47,7 +47,7 @@ class FizzBuzzTest < Minitest::Test
     describe 'タイプ2は数字のみ' do
       def setup
         @fizzbuzz = FizzBuzz
-        @type = '2'        
+        @type = 2        
       end
 
       describe '３の倍数の場合' do
@@ -82,7 +82,7 @@ class FizzBuzzTest < Minitest::Test
     describe 'タイプ3はFizzBuzzの場合のみ' do
       def setup
         @fizzbuzz = FizzBuzz
-        @type = '3'
+        @type = 3
       end
 
       describe '３の倍数の場合' do
@@ -120,11 +120,11 @@ class FizzBuzzTest < Minitest::Test
       end
 
       def test_タイプが0の場合は文字列errorを返す
-        assert_equal 'error', @fizzbuzz.generate(1, '0')
+        assert_equal 'error', @fizzbuzz.generate(1, 0)
       end
 
       def test_タイプが４の場合は文字列errorを返す
-        assert_equal 'error', @fizzbuzz.generate(1, '4')
+        assert_equal 'error', @fizzbuzz.generate(1, 4)
       end
 
       def test_タイプがnilの場合は文字列errorを返す
@@ -136,7 +136,7 @@ class FizzBuzzTest < Minitest::Test
   describe '1から１００までの数の配列を返す' do
     describe 'タイプ1は通常' do
       def setup
-        type = '1'
+        type = 1
         @result = FizzBuzz.generate_list(type)
       end
 
@@ -163,7 +163,7 @@ class FizzBuzzTest < Minitest::Test
 
     describe 'タイプ2は数字のみ' do
       def setup
-        type = '2'
+        type = 2
         @result = FizzBuzz.generate_list(type)
       end
 
@@ -190,7 +190,7 @@ class FizzBuzzTest < Minitest::Test
 
     describe 'タイプ3はFizzBuzzの場合のみ' do
       def setup
-        type = '3'
+        type = 3
         @result = FizzBuzz.generate_list(type)
       end
 
@@ -217,13 +217,13 @@ class FizzBuzzTest < Minitest::Test
 
     describe 'タイプが1,2,3以外の場合' do
       def test_タイプが0の場合は配列の初めは文字列errorを返す
-        type = '0'
+        type = 0
         result = FizzBuzz.generate_list(type)
         assert_equal 'error', result.first
       end
 
       def test_タイプが4の場合は配列の初めは文字列errorを返す
-        type = '4'
+        type = 4
         result = FizzBuzz.generate_list(type)
         assert_equal 'error', result.first
       end

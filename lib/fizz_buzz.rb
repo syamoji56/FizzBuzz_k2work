@@ -5,7 +5,7 @@ class FizzBuzz
   MAX_NUMBER = 100
 
   def self.generate(number, type)
-    if type == '1'
+    if type == 1
       is_fizz = number.modulo(3).zero?
       is_buzz = number.modulo(5).zero?
 
@@ -15,10 +15,10 @@ class FizzBuzz
 
       number.to_s
 
-    elsif type == '2'
+    elsif type == 2
       number.to_s
 
-    elsif type == '3'
+    elsif type == 3
       is_fizz = number.modulo(3).zero?
       is_buzz = number.modulo(5).zero?
 
