@@ -9,7 +9,6 @@ require './lib/fizz_buzz'
 
 class FizzBuzzTest < Minitest::Test
   describe 'FizzBuzz' do
-
     def setup
       @fizzbuzz = FizzBuzz
     end
