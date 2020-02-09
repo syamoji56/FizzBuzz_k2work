@@ -367,7 +367,7 @@ TvFXMeuCkZPcaEBLqvgPBhCuiZo8+sAAAAAASUVORK5CYII=
       <div class="infobox">
         <div class="total">
           3 files inspected,
-          11 offenses detected:
+          12 offenses detected:
         </div>
         <ul class="offenses-list">
           
@@ -388,7 +388,7 @@ TvFXMeuCkZPcaEBLqvgPBhCuiZo8+sAAAAAASUVORK5CYII=
             
             <li>
               <a href="#offense_test/fizz_buzz_test.rb">
-                test/fizz_buzz_test.rb - 1 offense
+                test/fizz_buzz_test.rb - 2 offenses
               </a>
             </li>
           
@@ -530,17 +530,28 @@ TvFXMeuCkZPcaEBLqvgPBhCuiZo8+sAAAAAASUVORK5CYII=
       
       <div class="offense-box" id="offense_test/fizz_buzz_test.rb">
         <div class="box-title-placeholder"><h3>&nbsp;</h3></div>
-        <div class="box-title"><h3>test/fizz_buzz_test.rb - 1 offense</h3></div>
+        <div class="box-title"><h3>test/fizz_buzz_test.rb - 2 offenses</h3></div>
         <div class="offense-reports">
           
           <div class="report">
             <div class="meta">
               <span class="location">Line #11</span> –
               <span class="severity convention">convention:</span>
-              <span class="message">Metrics/BlockLength: Block has too many lines. [76/46]</span>
+              <span class="message">Metrics/BlockLength: Block has too many lines. [57/46]</span>
             </div>
             
             <pre><code>  <span class="highlight convention">describe &#39;FizzBuzz&#39; do</span> <span class="extra-code">...</span></code></pre>
+            
+          </div>
+          
+          <div class="report">
+            <div class="meta">
+              <span class="location">Line #48</span> –
+              <span class="severity convention">convention:</span>
+              <span class="message">Style/AsciiComments: Use only ascii symbols in comments.</span>
+            </div>
+            
+            <pre><code>        @fizzbuzz = FizzBuzz # <span class="highlight convention">これないと</span>no method errorになる</code></pre>
             
           </div>
           
