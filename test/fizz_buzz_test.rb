@@ -169,5 +169,32 @@ class FizzBuzzTest < Minitest::Test
         assert_equal '15', @result[14]
       end
     end
+
+    describe 'タイプ3はFizzBuzzの場合のみ' do
+      def setup
+        type = 3
+        @result = FizzBuzz.generate_list(type)
+      end
+
+      def test_配列の初めは文字列の1を返す
+        assert_equal '1', @result.first
+      end
+
+      def test_配列の最後は文字列の100を返す
+        assert_equal '100', @result.last
+      end
+
+      def test_配列の２番目は文字列の3を返す
+        assert_equal '3', @result[2]
+      end
+
+      def test_配列の４番目は文字列の5を返す
+        assert_equal '5', @result[4]
+      end
+
+      def test_配列の１４番目は文字列のFizzBuzzを返す
+        assert_equal 'FizzBuzz', @result[14]
+      end
+    end
   end
 end
