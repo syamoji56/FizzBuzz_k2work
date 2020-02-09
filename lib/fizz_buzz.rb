@@ -14,6 +14,8 @@ class FizzBuzz
       return 'Buzz' if is_buzz
 
       number.to_s
+    else
+      number.to_s if type == 2
     end
   end
 

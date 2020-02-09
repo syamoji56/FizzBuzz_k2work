@@ -43,6 +43,18 @@ class FizzBuzzTest < Minitest::Test
       end
     end
 
+    describe 'タイプ2の場合' do
+ 
+      describe 'その他の場合' do
+        def test_1を渡したら文字列1を返す
+          assert_equal '1', FizzBuzz.generate(1, 2)
+        end
+
+        def test_2を渡したら文字列2を返す
+          assert_equal '2', FizzBuzz.generate(2, 2)
+        end
+      end
+    end
     describe '1から１００までの数の配列を返す' do
       def setup
         @result = FizzBuzz.generate_list
