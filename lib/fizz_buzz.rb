@@ -18,13 +18,15 @@ class FizzBuzz
     elsif type == 2
       number.to_s
 
-    else
+    elsif type == 3
       is_fizz = number.modulo(3).zero?
       is_buzz = number.modulo(5).zero?
 
       return 'FizzBuzz' if is_fizz && is_buzz
 
       number.to_s
+    else
+      'error'
     end
   end
 

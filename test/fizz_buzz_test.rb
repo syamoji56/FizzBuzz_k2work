@@ -113,6 +113,24 @@ class FizzBuzzTest < Minitest::Test
         end
       end
     end
+
+    describe 'タイプが1,2,3以外の場合' do
+      def setup
+        @fizzbuzz = FizzBuzz
+      end
+
+      def test_タイプが0の場合は文字列errorを返す
+        assert_equal 'error', @fizzbuzz.generate(1, 0)
+      end
+
+      def test_タイプが４の場合は文字列errorを返す
+        assert_equal 'error', @fizzbuzz.generate(1, 4)
+      end
+
+      def test_タイプがnilの場合は文字列errorを返す
+        assert_equal 'error', @fizzbuzz.generate(1, '')
+      end
+    end
   end
 
   describe '1から１００までの数の配列を返す' do
@@ -194,6 +212,26 @@ class FizzBuzzTest < Minitest::Test
 
       def test_配列の１４番目は文字列のFizzBuzzを返す
         assert_equal 'FizzBuzz', @result[14]
+      end
+    end
+
+    describe 'タイプが1,2,3以外の場合' do
+      def test_タイプが0の場合は配列の初めは文字列errorを返す
+        type = 0
+        result = FizzBuzz.generate_list(type)
+        assert_equal 'error', result.first
+      end
+
+      def test_タイプが4の場合は配列の初めは文字列errorを返す
+        type = 4
+        result = FizzBuzz.generate_list(type)
+        assert_equal 'error', result.first
+      end
+
+      def test_タイプがnilの場合は配列の初めは文字列errorを返す
+        type = ''
+        result = FizzBuzz.generate_list(type)
+        assert_equal 'error', result.first
       end
     end
   end

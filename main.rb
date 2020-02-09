@@ -2,4 +2,7 @@
 
 require './lib/fizz_buzz.rb'
 
-puts FizzBuzz.generate_list(1)
+p 'タイプを入力してください'
+input = gets
+p input
+puts FizzBuzz.generate_list(input)
